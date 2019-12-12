@@ -20,7 +20,7 @@ before_script:
   - git config --global user.name "CI/CD"
 
 variables:
-  APPNAME_PRODUCTION: dreamers-pipeline-rails
+  APPNAME_PRODUCTION: dreamer-pipeline-rails
 
 deploy_to_production:
   stage: deploy
