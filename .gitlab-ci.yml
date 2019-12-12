@@ -31,9 +31,10 @@ deploy_to_production:
     - git remote add heroku https://git.heroku.com/$APPNAME_PRODUCTION.git
     # - git remote add heroku https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/$APPNAME_PRODUCTION.git
     # - git remote add heroku https://git.heroku.com/dreamer-pipeline-rails.git
-    - touch README_scrap.md
-    - git add .
-    - git commit -m"First commit."
+    # - touch README_scrap.md
+    # - git add .
+    # - git commit -m"First commit."
+    - git checkout master
     - git push heroku master
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
     - heroku run rails db:migrate --app $APPNAME_PRODUCTION
