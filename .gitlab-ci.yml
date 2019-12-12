@@ -29,7 +29,7 @@ deploy_to_production:
     url: https://$APPNAME_PRODUCTION.herokuapp.com/
   script:
     # - git remote add heroku https://git.heroku.com/$APPNAME_PRODUCTION.git
-    - git remote add heroku https://heroku:${HEROKU_AUTH_TOKEN@git.heroku.com/$APPNAME_PRODUCTION.git
+    - git remote add heroku https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/$APPNAME_PRODUCTION.git
     # - git remote add heroku https://git.heroku.com/dreamer-pipeline-rails.git
     - git push heroku master
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
