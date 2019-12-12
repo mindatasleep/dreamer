@@ -28,7 +28,8 @@ deploy_to_production:
     name: production
     url: https://$APPNAME_PRODUCTION.herokuapp.com/
   script:
-    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/$APPNAME_PRODUCTION.git
+    - git remote add heroku https://git.heroku.com/$APPNAME_PRODUCTION.git
+    # - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/$APPNAME_PRODUCTION.git
     - git push heroku HEAD:master
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
     - heroku run rails db:migrate --app $APPNAME_PRODUCTION
