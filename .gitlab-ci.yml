@@ -34,8 +34,9 @@ deploy_to_production:
     # - touch README_scrap.md
     # - git add .
     # - git commit -m"First commit."
-    - git checkout master
-    - git push heroku master
+    # - git checkout master
+    # - git push heroku master
+    - git push heroku
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
     - heroku run rails db:migrate --app $APPNAME_PRODUCTION
   only:
