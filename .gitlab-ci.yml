@@ -18,9 +18,6 @@ before_script:
   - chmod 600 ~/.netrc
   - git config --global user.email "mindatasleep@gmail.com"
   - git config --global user.name "mindatasleep"
-  # Testing solution below
-  - dpl --provider=heroku --app=dreamer-pipeline-rails --api-key=$HEROKU_AUTH_TOKEN
-
 
 variables:
   APPNAME_PRODUCTION: dreamer-pipeline-rails
