@@ -21,6 +21,22 @@ before_script:
 
 variables:
   APPNAME_PRODUCTION: dreamer-pipeline-rails
+  APPNAME_STAGING: dreamer-pipeline-rails-staging
+
+deploy_to_staging:
+  stage: deploy
+  environment:
+    name: staging
+    url: https://$APPNAME_STAGING.herokuapp.com/
+  script:
+    - git remote add heroku https://git.heroku.com/$APPNAME_STAGING.git
+    - git push heroku master
+    - heroku pg:backups:capture --app $APPNAME_PRODUCTION
+    - heroku pg:backups:restore `heroku pg:backups:url --app $APPNAME_PRODUCTION` --app $APPNAME_STAGING --confirm $APPNAME_STAGING
+    - heroku run rails db:migrate --app $APPNAME_STAGING
+  only:
+    - master
+    - tags
 
 deploy_to_production:
   stage: deploy
@@ -28,10 +44,13 @@ deploy_to_production:
     name: production
     url: https://$APPNAME_PRODUCTION.herokuapp.com/
   script:
+    - echo $HEROKU_EMAIL
+    - echo $HEROKU_AUTH_TOKEN
     - git remote add heroku https://git.heroku.com/$APPNAME_PRODUCTION.git
-    # - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/$APPNAME_PRODUCTION.git
     - git push heroku HEAD:master
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
     - heroku run rails db:migrate --app $APPNAME_PRODUCTION
   only:
-    - master
+    # - master
+      - /^v(?'MAJOR'(?:0|(?:[1-9]\d*)))\.(?'MINOR'(?:0|(?:[1-9]\d*)))\.(?'PATCH'(?:0|(?:[1-9]\d*)))(?:-(?'prerelease'[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?(?:\+(?'build'[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?$/
+      # semver pattern above is adapted from https://github.com/semver/semver.org/issues/59#issuecomment-57884619
