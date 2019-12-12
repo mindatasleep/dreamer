@@ -16,8 +16,8 @@ before_script:
       password $HEROKU_AUTH_TOKEN
     EOF
   - chmod 600 ~/.netrc
-  - git config --global user.email "ci@example.com"
-  - git config --global user.name "CI/CD"
+  - git config --global user.email "mindatasleep@gmail.com"
+  - git config --global user.name "mindatasleep"
   # Testing solution below
   - dpl --provider=heroku --app=dreamer-pipeline-rails --api-key=$HEROKU_AUTH_TOKEN
 
@@ -32,13 +32,6 @@ deploy_to_production:
     url: https://$APPNAME_PRODUCTION.herokuapp.com/
   script:
     - git remote add heroku https://git.heroku.com/$APPNAME_PRODUCTION.git
-    # - git remote add heroku https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/$APPNAME_PRODUCTION.git
-    # - git remote add heroku https://git.heroku.com/dreamer-pipeline-rails.git
-    # - touch README_scrap.md
-    # - git add .
-    # - git commit -m"First commit."
-    # - git checkout master
-    # - git push heroku master
     - git push heroku HEAD:master
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
     - heroku run rails db:migrate --app $APPNAME_PRODUCTION
