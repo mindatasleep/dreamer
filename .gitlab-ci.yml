@@ -39,7 +39,7 @@ test:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
     - source ~/.bashrc
     - yarn
-    - gem install bundler  --no-ri --no-rdoc
+    - gem install bundler  --no-document
     - bundle install -j $(nproc) --path vendor
     - bundle exec rake db:setup RAILS_ENV=test
   script:
