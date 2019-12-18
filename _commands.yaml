@@ -1,0 +1,3 @@
+
+# Compile styles.scss
+node-sass app/assets/stylesheets/styles.scss app/assets/stylesheets/styles.css
