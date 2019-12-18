@@ -33,6 +33,7 @@ Rails.application.configure do
   config.assets.digest = true
   config.assets.compress = true
   config.serve_static_assets = true
+  config.serve_static_files = true
   config.assets.compile = true
 
 
