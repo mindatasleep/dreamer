@@ -4,8 +4,9 @@
 $white: #FFFFFF;
 $highlight: #7ac483;
 $grey_background: #001a21;
-$grey_copy: b9b7c6;
-$dark_grey: 3f3d4e;
+$grey_copy: #b9b7c6;
+$dark_grey: #3f3d4e;
+$pink: #f25278;
 
 
 
@@ -19,17 +20,40 @@ body {
     width: 1440;
     max-width: 90%;
     margin: 0 auto;
+}
 
+.button {
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: .5rem 3rem;
+    font-weight: $white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button_highlight {
+    background-color: $highlight;
+}
+
+.button_secondary {
+    background-color: rgba(250, 250, 250, 0.4);
+}
+
+.button_secondary {
+    padding: 0.3rem 1.5rem;
 }
 
 
 // ---- Banner Styles ---- //
 #banner {
-    background-image: url(banner.jpg);
+    background-image: url("bridge.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    header{
-        padding: 2rem 0;
+    header {
+        padding: 2.5rem 0;
+        // height: 100%;
+        width: 100%;
     }
     #logo{
         color: $grey_background;
@@ -51,7 +75,7 @@ body {
         }
     }
     .content {
-        padding: 2rem 0 6rem 0;
+        padding: 4rem 0 10rem 0;
         .title, .subtitle {
             color: #FFFFFF;
             text-align: center;
@@ -67,5 +91,27 @@ body {
             margin: 0 auto 2rem auto;
             line-height: 1.75;
         }
+        .button_wrapper {
+            text-align: center;
+            margin: 3rem 0;
+            .button {
+                margin: 0 0.75;
+            }
+        }
+    }
+}
+
+// ---- Integrations ---- //
+#integration_band {
+    background-image: url("logo_band.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    header {
+        padding: 24rem 10;
+        // height: 100%;
+        width: 100%;
+    }
+    .content {
+        padding: 4rem 0 4rem 0;
     }
 }
