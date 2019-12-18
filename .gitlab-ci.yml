@@ -74,7 +74,7 @@ deploy_to_production:
     - heroku pg:backups:capture --app $APPNAME_PRODUCTION
     - heroku run rails db:migrate --app $APPNAME_PRODUCTION
   only:
-    # - master
+    # - master 
     - /^v(?'MAJOR'(?:0|(?:[1-9]\d*)))\.(?'MINOR'(?:0|(?:[1-9]\d*)))\.(?'PATCH'(?:0|(?:[1-9]\d*)))(?:-(?'prerelease'[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?(?:\+(?'build'[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*))?$/
       # run on semantically versioned Git tags instead of the master branch 
       # semver pattern above is adapted from https://github.com/semver/semver.org/issues/59#issuecomment-57884619
