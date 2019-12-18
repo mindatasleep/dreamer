@@ -23,28 +23,28 @@ variables:
   APPNAME_PRODUCTION: dreamer-pipeline-rails
   APPNAME_STAGING: dreamer-pipeline-rails-staging
 
-test:
-  stage: test
-  variables:
-    POSTGRES_USER: test
-    POSTGRES_PASSSWORD: test-password
-    POSTGRES_DB: test
-    DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSSWORD}@postgres/${POSTGRES_DB}
-    RAILS_ENV: test
-  services:
-    - postgres:alpine
-  before_script:
-    - curl -sL https://deb.nodesource.com/setup_8.x | bash
-    - apt-get update -qq && apt-get install -yqq nodejs libpq-dev
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
-    - source ~/.bashrc
-    - yarn
-    - gem install bundler  --no-document
-    - bundle install -j $(nproc) --path vendor
-    - bundle exec rake db:setup RAILS_ENV=test
-  script:
-    - bundle exec rake spec
-    - bundle exec rubocop
+# test:
+#   stage: test
+#   variables:
+#     POSTGRES_USER: test
+#     POSTGRES_PASSSWORD: test-password
+#     POSTGRES_DB: test
+#     DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSSWORD}@postgres/${POSTGRES_DB}
+#     RAILS_ENV: test
+#   services:
+#     - postgres:alpine
+#   before_script:
+#     - curl -sL https://deb.nodesource.com/setup_8.x | bash
+#     - apt-get update -qq && apt-get install -yqq nodejs libpq-dev
+#     - curl -o- -L https://yarnpkg.com/install.sh | bash
+#     - source ~/.bashrc
+#     - yarn
+#     - gem install bundler  --no-document
+#     - bundle install -j $(nproc) --path vendor
+#     - bundle exec rake db:setup RAILS_ENV=test
+#   script:
+#     - bundle exec rake spec
+#     - bundle exec rubocop
 
 deploy_to_staging:
   stage: deploy
