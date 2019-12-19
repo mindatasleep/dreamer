@@ -39,7 +39,8 @@ body {
   background-image: url("bridge.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #c1fff4; }
+  background-color: #c1fff4;
+  height: 70rem; }
   #banner header {
     padding: 2.5rem 0 10rem 0;
     width: 100%; }
@@ -116,3 +117,50 @@ body {
       color: #3f3d4e; }
     #services .service .button {
       padding: .5rem 2rem; }
+
+#fieldwork {
+  background-image: url("run_garmin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #c1fff4;
+  height: 100%;
+  padding: 10rem 0 50rem 0; }
+  #fieldwork header {
+    padding: 50rem 0 100rem 0;
+    width: 100%; }
+  #fieldwork .boxed {
+    background: rgba(201, 201, 201, 0.384);
+    width: 31%;
+    float: left;
+    margin: -5rem 1% 0 1%;
+    padding: 3rem 2.5%;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25); }
+    #fieldwork .boxed h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #3f3d4e; }
+    #fieldwork .boxed p {
+      margin: 0 0 2rem 0;
+      color: #3f3d4e; }
+    #fieldwork .boxed #bigtext {
+      color: rgba(4, 180, 48, 0.644);
+      font-weight: 400;
+      font-size: 40rem;
+      float: left;
+      margin: 0; }
+
+#labwork {
+  background-image: url("facesplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #c1fff4;
+  height: 100%;
+  padding: 10rem 0 50rem 0; }
+  #labwork #bigtext {
+    padding: 50rem 0 40rem 0;
+    color: #c1fff4;
+    width: 80%; }
