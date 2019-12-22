@@ -68,11 +68,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $teal;
-    height: 70rem;
+    height: 50rem;
+    width: 100%;
     header {
         padding: 2.5rem 0 10rem 0;
         // height: 100%;
         width: 100%;
+    }
+    img{
+        display:inline-block;
+        // height:50px;
+        margin: 0 auto;
     }
     #logo{
         color: $grey_background;
@@ -94,7 +100,7 @@ body {
         }
     }
     .content {
-        padding: 1rem 0 10rem 0;
+        padding: .1rem 0 10rem 0;
         .title, .subtitle {
             // color: #FFFFFF;
             color: #001a21;

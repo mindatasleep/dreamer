@@ -47,10 +47,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #c1fff4;
-  height: 70rem; }
+  height: 50rem;
+  width: 100%; }
   #banner header {
     padding: 2.5rem 0 10rem 0;
     width: 100%; }
+  #banner img {
+    display: inline-block;
+    margin: 0 auto; }
   #banner #logo {
     color: #001a21;
     font-weight: 700;
@@ -67,7 +71,7 @@ body {
       text-decoration: none;
       margin-left: 2rem; }
   #banner .content {
-    padding: 1rem 0 10rem 0; }
+    padding: .1rem 0 10rem 0; }
     #banner .content .title, #banner .content .subtitle {
       color: #001a21;
       text-align: center; }
