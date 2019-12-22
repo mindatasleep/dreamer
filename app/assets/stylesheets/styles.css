@@ -43,7 +43,7 @@ body {
   clear: both; }
 
 #banner {
-  background-image: url("bridge_svg.svg");
+  background-image: url("banner_clear.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #c1fff4;
@@ -184,6 +184,6 @@ body {
 
 @media only screen and (max-width: 600px) {
   #bigtext {
-    font-size: 2rem; }
+    font-size: 3rem; }
   #bigtext2 {
     font-size: 1.5rem; } }
