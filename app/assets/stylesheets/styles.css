@@ -43,7 +43,7 @@ body {
   clear: both; }
 
 #banner {
-  background-image: url("bridge.jpg");
+  background-image: url("bridge_svg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #c1fff4;
@@ -175,7 +175,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #c1fff4;
-  background-position: right;
   height: 100%;
   padding: 10rem 0 50rem 0; }
   #contact #bigtext2 {
