@@ -83,11 +83,16 @@ body {
     #logo{
         color: $grey_background;
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 2.5rem;
         float: left;
         margin: 0;
         span {
             font-weight: 400;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        #logo {
+            font-size: 1.5rem;
         }
     }
     nav {
@@ -255,7 +260,10 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    #logo, #bigtext, #bigtext2 {
+    #bigtext {
         font-size: 2rem;
+    }
+    #bigtext2 {
+        font-size: 1.5rem;
     }
 }
