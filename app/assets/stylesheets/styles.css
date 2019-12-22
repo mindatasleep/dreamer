@@ -165,7 +165,7 @@ body {
       font-weight: 400;
       font-size: 40rem;
       float: left;
-      margin: 0; }
+      margin: 1 1 2rem 1; }
   @media only screen and (max-width: 600px) {
     #fieldwork .boxed {
       width: 95%; } }
