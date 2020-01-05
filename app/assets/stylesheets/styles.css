@@ -102,14 +102,19 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #001a21;
-  background-position: center; }
-  #integration_band header {
-    padding: 24rem 10 10rem 10;
-    margin: 80rem;
-    width: 100%; }
-  #integration_band .content {
-    padding: 4rem 0 4rem 0;
-    width: 100%; }
+  background-position: center; 
+  width: 100%;
+
+}
+#integration_band header {
+  /* padding: 24rem 10 10rem 10; */
+  /* margin: 80rem; */
+  width: 100%; 
+}
+#integration_band .content {
+  padding: 4rem 0 2rem 0;
+  width: 100%; 
+}
 
 #services {
   background: #001a21;
